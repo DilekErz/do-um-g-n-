@@ -1,0 +1,72 @@
+:root {
+  --kalpleranimasyon: url(simlipariltilikalpler.gif);
+  /* --kapler: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoc2S4k52hr2xLdV7z0w7PmIZXYnEzOOMK45P4sOPN8lI9xwgwOxW-q1e-SQnb6sPiQYTprBtm_kr4wHUtw5AFjkMqUPa_FQ8ewXx7qzwxMj3ORKT-yQaq5has7lZV61vqiwBrWpArmYo/s1600/simli+pariltili+kalpler.gif);
+*/
+  --opucuk: url(opucuk.gif);
+}
+.box {
+  position: relative;
+  width: 1440px;
+  background-color: pink;
+  border: 1px solid red;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 0;
+}
+.zarf-sarmal {
+  position: relative;
+  z-index: 1;
+}
+.kart {
+  position: relative;
+  z-index: 2;
+} /* yazı ve içerik arkaplandan önde */
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 1440px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-image: var(--kalpleranimasyon);
+  overflow: hidden;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+.kart {
+  text-align: center;
+  color: white;
+  align-items: center;
+  position: relative;
+  left: 20%;
+  top: 10%;
+}
+h2 {
+  text-align: center;
+  align-items: center;
+  font-size: 100px;
+  display: flex;
+}
+.opucuk {
+  position: absolute; /* .kart referans alınır */
+  right: -40px;
+  bottom: -20px;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  z-index: 9999; /* <-- şüpheye yer bırakma */
+  pointer-events: none; /* tıklamayı bloke etmesin */
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 50px;
+    width: 300px;
+  }
+  h2 {
+    text-align: center;
+    align-items: center;
+  }
+}
