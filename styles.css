@@ -60,7 +60,7 @@ h2 {
   pointer-events: none; /* tıklamayı bloke etmesin */
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   body {
     font-size: 50px;
     width: 300px;
@@ -69,4 +69,4 @@ h2 {
     text-align: center;
     align-items: center;
   }
-}
+} */
